@@ -42,7 +42,7 @@ function insertSort(arr) {
 }
 //希尔排序
 function shellSort(arr) {
-  let temp,
+  let tmp,
     gap = 1;
   const { length: n } = arr;
   while (gap < n / 3) {
@@ -79,7 +79,7 @@ function quickSort(arr, L, R) {
       left++;
     }
     if (left < right) arr[right] = arr[left];
-    if (left >= right) arr[left] = pivot;
+    else arr[left] = pivot;
   }
   quickSort(arr, L, right - 1);
   quickSort(arr, right + 1, R);
