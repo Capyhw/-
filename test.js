@@ -1,5 +1,21 @@
-let arr1 = [1, 2, 3, 4, 5],
-  arr2 = [4, 5, 6, 7, 8];
+function promise1() {
+  let p = new Promise((resolve) => {
+    console.log("promise1");
+    resolve("1");
+  });
+  return p;
+}
+function promise2() {
+  return new Promise((resolve, reject) => {
+    reject("error");
+  });
+}
+promise1()
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err))
+  .finally(() => console.log("finally1"));
 
-let diff = arr1.filter((x) => !arr2.includes(x));
-console.log(diff);
+promise2()
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err))
+  .finally(() => console.log("finally2"));

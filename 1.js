@@ -1,14 +1,22 @@
-/**
- * @param {number[]} numbers
- * @return {number}
- */
-var minArray = function (numbers) {
-    for(let i=0;i<numbers.length-1;i++){
-        if (numbers[i] > numbers[i + 1]) {
-            return numbers[i + 1]
-        }
-    }
-    return numbers[0]
+const Basket = {
+  onion: 1,
+  ginger: 2,
+  garlic: 3,
 };
 
-console.log(minArray([1, 3, 5]));
+const getVegetableNum = async (veg) => {
+  console.log(Basket[veg]);
+};
+
+let queue = [];
+const start = async () => {
+  console.log("Start");
+  const arr = ["onion", "ginger", "garlic"];
+  for (let i in arr) {
+    const veg = arr[i];
+    queue.push(getVegetableNum(veg));
+  }
+  await Promise.all(queue);
+};
+
+start();
