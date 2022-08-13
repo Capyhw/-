@@ -1,3 +1,3 @@
-let arr = new Array();
-arr.push(1);
-console.log(arr);
+let arr = [1, 2, 3];
+let map = new Map(...arr);
+console.log(map);
