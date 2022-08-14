@@ -18,9 +18,7 @@ var combinationSum3 = function (k, n) {
       //   if (i > startIndex && candidates[i] == candidates[i - 1]) continue;
       path.push(i);
       sum += i;
-      //递归
       backtracking(i + 1, sum); //不能重复使用同一个数,所以i + 1
-      //回溯
       sum -= i;
       path.pop();
     }

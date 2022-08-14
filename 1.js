@@ -1,3 +1,4 @@
-let arr = [1, 2, 3];
-let map = new Map(...arr);
-console.log(map);
+let arr = [3, 2, 1];
+let newArr = arr;
+arr.splice(1, 1);
+console.log(arr);
