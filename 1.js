@@ -1,4 +1,3 @@
-let arr = [3, 2, 1];
-let newArr = arr;
-arr.splice(1, 1);
+let arr = new Array(4).fill(0).map(() => new Array(4));
+
 console.log(arr);
