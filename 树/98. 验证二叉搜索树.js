@@ -1,15 +1,15 @@
 /**
- * 给你一个二叉树的根节点 root ，判断其是否是一个有效的二叉搜索树。
- * 有效 二叉搜索树定义如下：
- *      节点的左子树只包含 小于 当前节点的数。
- *      节点的右子树只包含 大于 当前节点的数。
- *      所有左子树和右子树自身必须也是二叉搜索树。
+ * 给你一个二叉树的根节点 root ,判断其是否是一个有效的二叉搜索树.
+ * 有效 二叉搜索树定义如下:
+ *      节点的左子树只包含 小于 当前节点的数.
+ *      节点的右子树只包含 大于 当前节点的数.
+ *      所有左子树和右子树自身必须也是二叉搜索树.
  */
 /**
  * @param {TreeNode} root
  * @return {boolean}
  */
-//方法1：
+//方法1:
 var isValidBST = function (root) {
     return help(root, -Infinity, Infinity)
 };
@@ -22,8 +22,8 @@ let help = function (root, min, max) {
     }
     return help(root.left, min, root.val) && help(root.right, root.val, max)
 }
-//方法2：
-//中序遍历二叉搜索树，遍历的结果一定是有序的
+//方法2:
+//中序遍历二叉搜索树,遍历的结果一定是有序的
 //首先中序遍历到数组arr中
 function middleOrder(root, arr = []) {
     if (root) {

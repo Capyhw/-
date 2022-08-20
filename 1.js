@@ -1,3 +1,3 @@
-let arr = new Array(4).fill(0).map(() => new Array(4));
-
-console.log(arr);
+let err1,
+  err2 = null;
+console.log(err1);
