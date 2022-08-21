@@ -8,7 +8,7 @@
 /**
  * @param {TreeNode} root
  * @return {number}
- * @description 前序遍历，放到Set中去重，返回Set的size
+ * @description 前序遍历,放到Set中去重,返回Set的size
  */
 
 var numColor = function (root) {
