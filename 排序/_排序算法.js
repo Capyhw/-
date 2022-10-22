@@ -64,7 +64,7 @@ function shellSort(arr) {
 }
 //归并排序
 
-//快速排序  对arr的【left，right】进行排序
+//快速排序  对arr的【left,right】进行排序
 function quickSort(arr, L, R) {
   if (L >= R) return;
   let left = L,
@@ -75,12 +75,15 @@ function quickSort(arr, L, R) {
       right--;
     }
     if (left < right) arr[left] = arr[right];
+    console.log(arr);
     while (left < right && arr[left] < pivot) {
       left++;
     }
     if (left < right) arr[right] = arr[left];
     else arr[left] = pivot;
+    console.log(arr);
   }
+  console.log("---", arr);
   quickSort(arr, L, right - 1);
   quickSort(arr, right + 1, R);
   return arr;

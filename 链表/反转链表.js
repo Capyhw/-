@@ -15,6 +15,7 @@ var reverseList = function (head) {
     while (head !== null) {
         let temp = head.next
         head.next = newNode
+        //往后移动
         newNode = head
         head = temp
     }
